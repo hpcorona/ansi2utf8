@@ -55,16 +55,18 @@ func RevisarUTF8(file string) {
 	}
 	
 	mcount := 0
-	if cont[0] == 0xEF {
-		mcount++
-	}
+	if len(cont) >= 3 {
+		if cont[0] == 0xEF {
+			mcount++
+		}
 
-	if cont[1] == 0xBB {
-		mcount++
-	}
+		if cont[1] == 0xBB {
+			mcount++
+		}
 
-	if cont[2] == 0xBF {
-		mcount++
+		if cont[2] == 0xBF {
+			mcount++
+		}
 	}
 	
 	if mcount == 3 {
