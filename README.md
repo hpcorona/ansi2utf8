@@ -7,6 +7,7 @@ You just need to put the executable in your folder and run it. It will seek for 
 
 You can also drag and drop a XML file to the executable.
 
+WARNING: This program WILL NOT convert your characters to UTF-8, it will just add the BOM at the start of the file.
 
 
 ## License
